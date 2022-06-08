@@ -1,0 +1,27 @@
+{
+  "name": "common-shortcut-keys",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "dev": "vitepress dev docs",
+    "docs:build": "vitepress build docs",
+    "docs:serve": "vitepress serve docs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yinzhixiaxue/common-shortcut-keys.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yinzhixiaxue/common-shortcut-keys/issues"
+  },
+  "homepage": "https://github.com/yinzhixiaxue/common-shortcut-keys#readme",
+  "devDependencies": {
+    "vitepress": "^0.22.4"
+  }
+}
