@@ -1,3 +1,4 @@
+:set ff = unix
 #!/usr/bin/env sh
 
 # abort on errors
