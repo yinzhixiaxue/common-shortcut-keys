@@ -2,7 +2,7 @@ import { defineConfig } from "vitepress";
 
 export default defineConfig({
   lang: "en-US",
-  title: "Vim通关小册",
+  title: "常用快捷键通关小册",
   description: "Vite & Vue powered static site generator.",
   lastUpdated: true,
   base: "/common-shortcut-keys/",
@@ -40,16 +40,18 @@ function getGuideSidebar() {
   return [
     {
       text: "开始我们Vim学习吧～👀",
-      link: "",
+      link: "/vim/index",
+      children: [
+        { text: "什么是Vim", link: "/vim/什么是Vim" },
+        { text: "安装Vim", link: "/vim/安装Vim" },
+        { text: "Vim练习第一天", link: "/vim/Vim练习第一天" },
+        { text: "Vim练习第二天", link: "/vim/Vim练习第二天" },
+        { text: "Vim练习第三天", link: "/vim/Vim练习第三天" },
+        { text: "Vim练习第四天", link: "/vim/Vim练习第四天" },
+        { text: "Vim练习第五天", link: "/vim/Vim练习第五天" },
+        { text: "Vim备忘录清单", link: "/vim/Vim备忘录清单" },
+        { text: "Vim练习第六天", link: "/vim/Vim练习第六天" },
+      ],
     },
-    { text: "什么是Vim", link: "/vim/什么是Vim" },
-    { text: "安装Vim", link: "/vim/安装Vim" },
-    { text: "Vim练习第一天", link: "/vim/Vim练习第一天" },
-    { text: "Vim练习第二天", link: "/vim/Vim练习第二天" },
-    { text: "Vim练习第三天", link: "/vim/Vim练习第三天" },
-    { text: "Vim练习第四天", link: "/vim/Vim练习第四天" },
-    { text: "Vim练习第五天", link: "/vim/Vim练习第五天" },
-    { text: "Vim备忘录清单", link: "/vim/Vim备忘录清单" },
-    { text: "Vim练习第六天", link: "/vim/Vim练习第六天" },
   ];
 }
