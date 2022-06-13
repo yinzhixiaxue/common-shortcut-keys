@@ -37,12 +37,12 @@
 1. 进入 https://github.com/VSCodeVim/Vim#mac  这个网站
 2. 以此复制如下的命令，在自己电脑的终端中敲下即可（mac）
 
-```shel
+<!-- ```shel
 $ defaults write com.microsoft.VSCode ApplePressAndHoldEnabled -bool false              # For VS Code
 $ defaults write com.microsoft.VSCodeInsiders ApplePressAndHoldEnabled -bool false      # For VS Code Insider
 $ defaults write com.visualstudio.code.oss ApplePressAndHoldEnabled -bool false         # For VS Codium
 $ defaults write com.microsoft.VSCodeExploration ApplePressAndHoldEnabled -bool false   # For VS Codium Exploration users
 $ defaults delete -g ApplePressAndHoldEnabled                                           # If necessary, reset global default
-```
+``` -->
 
 3. 重启vim，这样你就能连续按hjkl在命令模式中快速移动了
