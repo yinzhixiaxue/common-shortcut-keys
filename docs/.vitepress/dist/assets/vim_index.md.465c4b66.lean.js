@@ -1,0 +1,1 @@
+import{_ as e,c as t,o as a,b as o}from"./app.fafffde1.js";const u='{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"vim/index.md","lastUpdated":1655101793000}',s={},n=o("p",null,"123123123",-1),r=[n];function c(d,_,i,p,l,f){return a(),t("div",null,r)}var h=e(s,[["render",c]]);export{u as __pageData,h as default};
