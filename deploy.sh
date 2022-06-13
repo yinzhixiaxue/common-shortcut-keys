@@ -20,7 +20,7 @@ git commit -m 'deploy'
 # git push -f git@github.com:<USERNAME>/<USERNAME>.github.io.git master
 
 # if you are deploying to https://<USERNAME>.github.io/<REPO>
- git push -f https://yinzhixiaxue.github.io/common-shortcut-keys master:gh-pages-deploy
+ git push -f git@github.com:yinzhixiaxue/common-shortcut-keys.git master:gh-pages-deploy
 
  cd ../../../ && rm -rf docs/.vitepress/dist
 
