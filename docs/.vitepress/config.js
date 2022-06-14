@@ -5,7 +5,7 @@ export default defineConfig({
   title: "常用快捷键通关小册",
   description: "Vite & Vue powered static site generator.",
   lastUpdated: true,
-  base: "/common-shortcut-keys/",
+  base: "/",
 
   themeConfig: {
     repo: "yinzhixiaxue/common-shortcut-keys",
