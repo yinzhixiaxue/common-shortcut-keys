@@ -21,7 +21,7 @@
     "url": "https://github.com/yinzhixiaxue/common-shortcut-keys/issues"
   },
   "homepage": "https://github.com/yinzhixiaxue/common-shortcut-keys#readme",
-  "devDependencies": {
+  "dependencies": {
     "vitepress": "^0.22.4"
   }
 }
