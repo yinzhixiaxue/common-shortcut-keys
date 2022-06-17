@@ -51,6 +51,8 @@ function getGuideSidebar() {
         { text: "Vim练习第五天", link: "/vim/Vim练习第五天" },
         { text: "Vim备忘录清单", link: "/vim/Vim备忘录清单" },
         { text: "Vim练习第六天", link: "/vim/Vim练习第六天" },
+        { text: "Vim练习第十四天", link: "/vim/Vim练习第十四天" },
+        { text: "ceshi", link: "/vim/ceshi" },
       ],
     },
   ];
