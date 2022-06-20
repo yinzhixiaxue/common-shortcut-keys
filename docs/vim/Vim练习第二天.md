@@ -9,6 +9,8 @@
 - `g_`移动到当前行最后一个不是black字符的位置
   - 推荐改建`shift+l`
 
+本次修改键位是由于手移动不方便，并且修改后与原有移动方式（h，l）的记忆方式是类似的
+
 上面提到的改建可以进入`vsode` 的`settings`更改(`command+shift+p`)即可进入，然后把以下圈中的代码填入`setting即可`
 
 <img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2ve3hhc4kj21380u0wk5.jpg" alt="image-20220603213738356" style="zoom:33%;" />
@@ -20,6 +22,7 @@
 - `O`插入当行前
 - `o`插入到行后
 
+I，A的记忆方式也是参照了i，a的，可以进行辅助记忆
 ## 复制粘贴以及删除
 
 - `yy`复制当前行
