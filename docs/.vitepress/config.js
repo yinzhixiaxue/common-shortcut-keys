@@ -2,7 +2,7 @@ import { defineConfig } from "vitepress";
 
 export default defineConfig({
   lang: "en-US",
-  title: "常用快捷键通关小册",
+  title: "银之夏雪的博客",
   description: "Vite & Vue powered static site generator.",
   lastUpdated: true,
   base: "/",
@@ -25,7 +25,7 @@ export default defineConfig({
       { text: "Start", link: "/vim", activeMatch: "^/$|^/vim/" },
       {
         text: "About ME",
-        link: "https://github.com/sudongyuer",
+        link: "https://github.com/yinzhixiaxue",
       },
     ],
 
@@ -53,7 +53,6 @@ function getGuideSidebar() {
         { text: "Vim练习第六天", link: "/vim/Vim练习第六天" },
         { text: "Vim练习第十三天", link: "/vim/Vim练习第十三天" },
         { text: "Vim练习第十四天", link: "/vim/Vim练习第十四天" },
-        { text: "ceshi", link: "/vim/ceshi" },
       ],
     },
   ];
