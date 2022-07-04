@@ -73,6 +73,10 @@ function getGuideSidebar() {
           text: "vscode文件与窗口基本操作",
           link: "/shortcut/vscode/文件与窗口基本操作",
         },
+        {
+          text: "vscode多窗口操作",
+          link: "/shortcut/vscode/多窗口操作",
+        },
       ],
     },
   ];
