@@ -22,7 +22,7 @@ export default defineConfig({
     },
 
     nav: [
-      { text: "Start", link: "/vim", activeMatch: "^/$|^/vim/" },
+      { text: "Start", link: "/shortcut/", activeMatch: "^/$|^/shortcut/" },
       {
         text: "About ME",
         link: "https://github.com/yinzhixiaxue",
@@ -30,7 +30,9 @@ export default defineConfig({
     ],
 
     sidebar: {
-      "/vim/": getGuideSidebar(),
+      // "/vim/": getVimSidebar(),
+      // "/vscode/": getVscodeSidebar(),
+      // "/": getGuideSidebar(),
       "/": getGuideSidebar(),
     },
   },
@@ -39,21 +41,57 @@ export default defineConfig({
 function getGuideSidebar() {
   return [
     {
-      text: "开始我们Vim学习吧～👀",
-      link: "/vim/index",
+      text: "欢迎来到快捷键页面",
+      link: "/shortcut/index",
+    },
+    {
+      text: "我们开始Vim的学习吧～👀",
+      link: "/shortcut/vim/index",
       children: [
-        { text: "什么是Vim", link: "/vim/什么是Vim" },
-        { text: "安装Vim", link: "/vim/安装Vim" },
-        { text: "Vim练习第一天", link: "/vim/Vim练习第一天" },
-        { text: "Vim练习第二天", link: "/vim/Vim练习第二天" },
-        { text: "Vim练习第三天", link: "/vim/Vim练习第三天" },
-        { text: "Vim练习第四天", link: "/vim/Vim练习第四天" },
-        { text: "Vim练习第五天", link: "/vim/Vim练习第五天" },
-        { text: "Vim备忘录清单", link: "/vim/Vim备忘录清单" },
-        { text: "Vim练习第六天", link: "/vim/Vim练习第六天" },
-        { text: "Vim练习第十三天", link: "/vim/Vim练习第十三天" },
-        { text: "Vim练习第十四天", link: "/vim/Vim练习第十四天" },
+        { text: "什么是Vim", link: "/shortcut/vim/什么是Vim" },
+        { text: "安装Vim", link: "/shortcut/vim/安装Vim" },
+        { text: "Vim练习第一天", link: "/shortcut/vim/Vim练习第一天" },
+        { text: "Vim练习第二天", link: "/shortcut/vim/Vim练习第二天" },
+        { text: "Vim练习第三天", link: "/shortcut/vim/Vim练习第三天" },
+        { text: "Vim练习第四天", link: "/shortcut/vim/Vim练习第四天" },
+        { text: "Vim练习第五天", link: "/shortcut/vim/Vim练习第五天" },
+        { text: "Vim备忘录清单", link: "/shortcut/vim/Vim备忘录清单" },
+        { text: "Vim练习第六天", link: "/shortcut/vim/Vim练习第六天" },
+        { text: "Vim练习第十三天", link: "/shortcut/vim/Vim练习第十三天" },
+        { text: "Vim练习第十四天", link: "/shortcut/vim/Vim练习第十四天" },
+      ],
+    },
+    {
+      text: "我们开始vscode的学习吧～👀",
+      link: "/shortcut/vscode/index",
+      children: [
+        {
+          text: "文件与窗口基本操作;",
+          link: "/shortcut/vscode/文件与窗口基本操作",
+        },
       ],
     },
   ];
 }
+
+// function getVscodeSidebar() {
+//   return [
+//     {
+//       text: "我们开始vscode的学习吧～👀",
+//       link: "/vscode/index",
+//       children: [
+//         { text: "文件与窗口基本操作;", link: "/vscode/文件与窗口基本操作" },
+//         { text: "安装Vim", link: "/vim/安装Vim" },
+//         { text: "Vim练习第一天", link: "/vim/Vim练习第一天" },
+//         { text: "Vim练习第二天", link: "/vim/Vim练习第二天" },
+//         { text: "Vim练习第三天", link: "/vim/Vim练习第三天" },
+//         { text: "Vim练习第四天", link: "/vim/Vim练习第四天" },
+//         { text: "Vim练习第五天", link: "/vim/Vim练习第五天" },
+//         { text: "Vim备忘录清单", link: "/vim/Vim备忘录清单" },
+//         { text: "Vim练习第六天", link: "/vim/Vim练习第六天" },
+//         { text: "Vim练习第十三天", link: "/vim/Vim练习第十三天" },
+//         { text: "Vim练习第十四天", link: "/vim/Vim练习第十四天" },
+//       ],
+//     },
+//   ];
+// }

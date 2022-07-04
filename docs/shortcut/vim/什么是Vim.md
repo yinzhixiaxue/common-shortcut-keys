@@ -22,7 +22,7 @@ vim 具有程序编辑的能力，可以主动的以字体颜色辨别语法的�
 - 它支持多个窗口，使用此功能屏幕可以拆分为多个窗口。
 - 与多个窗口相同，它还支持多个缓冲区。它支持多个选项卡，允许处理多个文件。
 - 它支持录制功能，允许以重复方式录制和播放Vim命令。
-//更多请阅读：https://www.yiibai.com/vim/vim_introduction.html
+- 更多请阅读：https://www.yiibai.com/vim/vim_introduction.html
 
 
 
