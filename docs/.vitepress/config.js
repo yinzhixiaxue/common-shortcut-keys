@@ -22,7 +22,7 @@ export default defineConfig({
     },
 
     nav: [
-      { text: "Start", link: "/shortcut/", activeMatch: "^/$|^/shortcut/" },
+      { text: "Start", link: "/shortcut/home", activeMatch: "^/$|^/shortcut/" },
       {
         text: "About ME",
         link: "https://github.com/yinzhixiaxue",
@@ -41,8 +41,8 @@ export default defineConfig({
 function getGuideSidebar() {
   return [
     {
-      text: "欢迎来到快捷键页面",
-      link: "/shortcut/index",
+      text: "欢迎大家一起学习快捷键",
+      // link: "/shortcut/home",
     },
     {
       text: "我们开始Vim的学习吧～👀",
@@ -66,7 +66,11 @@ function getGuideSidebar() {
       link: "/shortcut/vscode/index",
       children: [
         {
-          text: "文件与窗口基本操作;",
+          text: "vscode相关配置",
+          link: "/shortcut/vscode/index",
+        },
+        {
+          text: "vscode文件与窗口基本操作",
           link: "/shortcut/vscode/文件与窗口基本操作",
         },
       ],

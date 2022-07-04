@@ -3,7 +3,7 @@ home: true
 heroText: mac常用快捷键   
 tagline: 包括常用的vim,vscode,chorme,mac等常用的快捷键 
 actionText: 快速开始
-actionLink: /shortcut/
+actionLink: /shortcut/home
 features:
   - title: 简洁至上
     details: 所有组件支持全量引入和按需引入

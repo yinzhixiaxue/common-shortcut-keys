@@ -28,5 +28,4 @@ vim 具有程序编辑的能力，可以主动的以字体颜色辨别语法的�
 
 vim 键盘图：
 
-![img](https://tva1.sinaimg.cn/large/e6c9d24egy1h2v6r2yu30g20sg0k40w3.gif)
-<!-- [![vim.png](https://i.postimg.cc/fLHnB2Ff/vim.png)](https://postimg.cc/TLW4P9TK) -->
+<img src="https://pic.imgdb.cn/item/62c295ae5be16ec74a18e365.png">
