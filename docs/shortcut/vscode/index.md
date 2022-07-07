@@ -13,7 +13,9 @@ Vim支持很多IDE编辑器，下面👇就举例大家最常用的`vscode`编�
 5. 粘贴然后修改成我们需要的配置形式就可以了，我们未来可以通过这个配置文件维护属于自己的一套属于自己的vscode快捷键了
    ![](https://pic.imgdb.cn/item/62c2a3515be16ec74a2b8621.png)
 
-
+::: tip
+vscode默认有一些快捷键，但是并不是特别方便，就可以在 keybindings.json 中映射：
+:::
 
 <!-- [![key.png](https://i.postimg.cc/c1vvJknF/key.png)](https://postimg.cc/5jM473pz) -->
 

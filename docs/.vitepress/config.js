@@ -77,6 +77,10 @@ function getGuideSidebar() {
           text: "vscode多窗口操作",
           link: "/shortcut/vscode/多窗口操作",
         },
+        {
+          text: "vscode掌握搜索",
+          link: "/shortcut/vscode/掌握搜索",
+        },
       ],
     },
   ];
