@@ -22,7 +22,13 @@ export default defineConfig({
     },
 
     nav: [
-      { text: "Start", link: "/shortcut/home", activeMatch: "^/$|^/shortcut/" },
+      // { text: "Start", link: "/shortcut/home", activeMatch: "^/$|^/shortcut/" },
+      { text: "前端部署", link: "/blog/docker/", activeMatch: "^/$|^/docker/" },
+      {
+        text: "键盘侠",
+        link: "/blog/shortcut/",
+        activeMatch: "^/$|^/shortcut/",
+      },
       {
         text: "About ME",
         link: "https://github.com/yinzhixiaxue",
@@ -33,53 +39,69 @@ export default defineConfig({
       // "/vim/": getVimSidebar(),
       // "/vscode/": getVscodeSidebar(),
       // "/": getGuideSidebar(),
-      "/": getGuideSidebar(),
+      // "blog/shortcut": getGuideSidebar(),
+      "/blog/shortcut": getGuideSidebar(),
+      "/blog/docker": getDockerSidebar(),
     },
   },
 });
 
+function getDockerSidebar() {
+  return [
+    {
+      text: "docker",
+      link: "/blog/docker/index",
+      children: [
+        { text: "docker基础", link: "/blog/docker/docker基础" },
+        { text: "静态资源服务器", link: "/blog/docker/静态资源服务器" },
+        { text: "docker2", link: "/blog/docker/docker2" },
+        // { text: "docker基础", link: "/blog/docker/docker基础" },
+      ],
+    },
+  ];
+}
 function getGuideSidebar() {
   return [
     {
       text: "欢迎大家一起学习快捷键",
-      // link: "/shortcut/home",
+      link: "/blog/shortcut/index",
     },
     {
       text: "我们开始Vim的学习吧～👀",
-      link: "/shortcut/vim/index",
+      link: "/blog/shortcut/vim/index",
       children: [
-        { text: "什么是Vim", link: "/shortcut/vim/什么是Vim" },
-        { text: "安装Vim", link: "/shortcut/vim/安装Vim" },
-        { text: "Vim练习第一天", link: "/shortcut/vim/Vim练习第一天" },
-        { text: "Vim练习第二天", link: "/shortcut/vim/Vim练习第二天" },
-        { text: "Vim练习第三天", link: "/shortcut/vim/Vim练习第三天" },
-        { text: "Vim练习第四天", link: "/shortcut/vim/Vim练习第四天" },
-        { text: "Vim练习第五天", link: "/shortcut/vim/Vim练习第五天" },
-        { text: "Vim备忘录清单", link: "/shortcut/vim/Vim备忘录清单" },
-        { text: "Vim练习第六天", link: "/shortcut/vim/Vim练习第六天" },
-        { text: "Vim练习第十三天", link: "/shortcut/vim/Vim练习第十三天" },
-        { text: "Vim练习第十四天", link: "/shortcut/vim/Vim练习第十四天" },
+        { text: "什么是Vim", link: "/blog/shortcut/vim/什么是Vim" },
+        { text: "安装Vim", link: "/blog/shortcut/vim/安装Vim" },
+        { text: "Vim练习第一天", link: "/blog/shortcut/vim/Vim练习第一天" },
+        { text: "Vim练习第二天", link: "/blog/shortcut/vim/Vim练习第二天" },
+        { text: "Vim练习第三天", link: "/blog/shortcut/vim/Vim练习第三天" },
+        { text: "Vim练习第四天", link: "/blog/shortcut/vim/Vim练习第四天" },
+        { text: "Vim练习第五天", link: "/blog/shortcut/vim/Vim练习第五天" },
+        { text: "Vim备忘录清单", link: "/blog/shortcut/vim/Vim备忘录清单" },
+        { text: "Vim练习第六天", link: "/blog/shortcut/vim/Vim练习第六天" },
+        { text: "Vim练习第十三天", link: "/blog/shortcut/vim/Vim练习第十三天" },
+        { text: "Vim练习第十四天", link: "/blog/shortcut/vim/Vim练习第十四天" },
       ],
     },
     {
       text: "我们开始vscode的学习吧～👀",
-      link: "/shortcut/vscode/index",
+      link: "/blog/shortcut/vscode/index",
       children: [
         {
           text: "vscode相关配置",
-          link: "/shortcut/vscode/index",
+          link: "/blog/shortcut/vscode/index",
         },
         {
           text: "vscode文件与窗口基本操作",
-          link: "/shortcut/vscode/文件与窗口基本操作",
+          link: "/blog/shortcut/vscode/文件与窗口基本操作",
         },
         {
           text: "vscode多窗口操作",
-          link: "/shortcut/vscode/多窗口操作",
+          link: "/blog/shortcut/vscode/多窗口操作",
         },
         {
           text: "vscode掌握搜索",
-          link: "/shortcut/vscode/掌握搜索",
+          link: "/blog/shortcut/vscode/掌握搜索",
         },
       ],
     },
