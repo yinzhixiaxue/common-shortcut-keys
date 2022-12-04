@@ -22,7 +22,16 @@ export default defineConfig({
     },
 
     nav: [
-      // { text: "Start", link: "/shortcut/home", activeMatch: "^/$|^/shortcut/" },
+      // {
+      //   text: "前端基础",
+      //   link: "/blog/fe/",
+      //   activeMatch: "^/$|^/fe/",
+      // },
+      {
+        text: "js基础",
+        link: "/blog/javascript/",
+        activeMatch: "^/$|^/javascript/",
+      },
       { text: "前端部署", link: "/blog/docker/", activeMatch: "^/$|^/docker/" },
       {
         text: "键盘侠",
@@ -42,6 +51,8 @@ export default defineConfig({
       // "blog/shortcut": getGuideSidebar(),
       "/blog/shortcut": getGuideSidebar(),
       "/blog/docker": getDockerSidebar(),
+      "/blog/javascript/": getJSSidebar(),
+      // "/blog/fe": getJFeSidebar(),
     },
   },
 });
@@ -57,6 +68,25 @@ function getDockerSidebar() {
         { text: "docker2", link: "/blog/docker/docker2" },
         // { text: "docker基础", link: "/blog/docker/docker基础" },
       ],
+    },
+  ];
+}
+
+function getJSSidebar() {
+  return [
+    {
+      text: "前端基础",
+      link: "/blog/javascript/index",
+      // children: [
+      //   {
+      //     text: "json",
+      //     link: "/blog/javascript/json",
+      //   },
+      // ],
+    },
+    {
+      text: "json",
+      link: "/blog/javascript/json",
     },
   ];
 }
