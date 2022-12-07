@@ -88,6 +88,10 @@ function getJSSidebar() {
       text: "json",
       link: "/blog/javascript/json",
     },
+    {
+      text: "数组",
+      link: "/blog/javascript/数组",
+    },
   ];
 }
 function getGuideSidebar() {
