@@ -92,6 +92,10 @@ function getJSSidebar() {
       text: "数组",
       link: "/blog/javascript/数组",
     },
+    {
+      text: "继承",
+      link: "/blog/javascript/继承",
+    },
   ];
 }
 function getGuideSidebar() {
