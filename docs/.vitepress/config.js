@@ -32,18 +32,20 @@ export default defineConfig({
         link: "/blog/javascript/",
         activeMatch: "^/$|^/javascript/",
       },
-      { text: "前端部署", link: "/blog/docker/", activeMatch: "^/$|^/docker/" },
+      { text: "前端部署", link: "/blog/docker/" },
       {
         text: "键盘侠",
         link: "/blog/shortcut/",
-        activeMatch: "^/$|^/shortcut/",
+      },
+      {
+        text: "面试",
+        link: "/blog/interview/",
       },
       {
         text: "About ME",
         link: "https://github.com/yinzhixiaxue",
       },
     ],
-
     sidebar: {
       // "/vim/": getVimSidebar(),
       // "/vscode/": getVscodeSidebar(),
@@ -52,11 +54,38 @@ export default defineConfig({
       "/blog/shortcut": getGuideSidebar(),
       "/blog/docker": getDockerSidebar(),
       "/blog/javascript/": getJSSidebar(),
+      "/blog/interview/": getInterviewSidebar(),
       // "/blog/fe": getJFeSidebar(),
     },
   },
 });
 
+function getInterviewSidebar() {
+  return [
+    {
+      text: "interview",
+      link: "/blog/interview/index",
+      children: [
+        {
+          text: "JS相关",
+          link: "/blog/interview/js",
+          // children: [
+          //   { text: 'JavaScript', link: '/blog/interview/js/' },
+          //   { text: 'CSS', link: '/blog/interview/css/' },
+          //   { text: '浏览器原理', link: '/blog/interview/browser/' }
+          // ]
+        },
+        {
+          text: "CSS相关",
+          link: "/blog/interview/css",
+        },
+        // { text: "静态资源服务器", link: "/blog/docker/静态资源服务器" },
+        // { text: "docker2", link: "/blog/docker/docker2" },
+        // { text: "docker基础", link: "/blog/docker/docker基础" },
+      ],
+    },
+  ];
+}
 function getDockerSidebar() {
   return [
     {
