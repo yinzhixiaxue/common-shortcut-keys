@@ -79,6 +79,10 @@ function getInterviewSidebar() {
           text: "CSS相关",
           link: "/blog/interview/css",
         },
+        {
+          text: "Vue相关",
+          link: "/blog/interview/vue",
+        },
         // { text: "静态资源服务器", link: "/blog/docker/静态资源服务器" },
         // { text: "docker2", link: "/blog/docker/docker2" },
         // { text: "docker基础", link: "/blog/docker/docker基础" },

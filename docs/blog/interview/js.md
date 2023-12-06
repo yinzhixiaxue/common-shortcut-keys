@@ -129,7 +129,9 @@ Function 的构造函数是 Function 本身，Function.**proto**=Function.protot
 
 ```js
 function myInstanceof(left, right) {
-  if (typeof left !== 'object' || typeof left === null) return false let rprototype = right.prototype let lproto = left.__proto__
+  if (typeof left !== 'object' || typeof left === null) return false
+  let rprototype = right.prototype
+  let lproto = left.__proto__
   while (true) {
     if (lproto === null) return false
     if (lproto === rprototype) return true lproto = lproto.__proto__
@@ -410,6 +412,20 @@ Function.prototype.myBind = function(context) {
 
 无论调用多少次，最终函数的 this 只会取第一次的 bind 方法的参数
 
+### 19. js 的作用域
+#### 相关问题
+解释一下js中的作用域
+#### 概念
+在JavaScript中，作用域（Scope）是指在程序中定义变量的可见范围。
+#### 深入知识点
+JavaScript中作用域可以分为全局作用域和函数作用域、块级作用域。
+全局作用域是指在代码中任意地方都可以访问的变量，它们在整个程序中都是可见的。
+函数作用域是指在函数内部定义的变量，只能在该函数内部访问，在函数外部无法访问这些变量。
+块级作用域是在ES6中提出的，是指在代码块（通常是指用花括号包含的语句集合）中定义的变量，只能在该代码块中访问，代码块外无法访问这些变量。可以使用let或const可以创建块级作用域。
+#### 总结收敛
+JavaScript中，变量的作用域是由它们在代码中声明的位置所决定的。当程序执行时，JavaScript引擎会根据变量声明的位置来确定变量的作用域。
+通常，let和const变量在声明的位置下方的代码都可以访问该变量，而在声明位置上方的代码则无法访问该变量。
+
 ### 19.谈谈你对作用域和作用域链的理解
 
 关键词：作用域是什么、存储变量访问变量的规则是什么、编译阶段和执行阶段、全局、函数、块级
@@ -455,22 +471,23 @@ Function.prototype.myBind = function(context) {
 
 ### 20.闭包的作用和原理以及使用场景
 #### 1、闭包是什么？
-闭包是指在一个函数内部定义的函数，并且该函数可以访问外部函数的变量和参数。在js中，由于函数是一等对象，因此可以将函数作为返回值，从而形成闭包。
-#### 讲概念
-闭包是指有权访问另一个函数作用于中变量的函数，优点是私有化数据，在私有化数据的基础上保持数据，确定使用不恰当会导致内存泄漏，在不需要用到的时候及时把变量置为null
+闭包是指在一个外部函数内部定义的内部函数，并且该函数可以访问外部函数内部的变量和参数。在js中，由于函数是一等对象，因此可以将函数作为返回值，从而形成闭包。
+#### 讲概念（知识点深入）
+闭包是指有权访问另一个函数作用域中变量的函数。优点是私有化数据，在私有化数据的基础上保存数据。缺点是使用不当会导致内存泄漏，在不需要用到的时候及时的把变量置为null。
 
-#### 详细来说：
+#### 详细来说（作用）：
 闭包可以将变量和函数私有化，从而避免命名冲突和变量污染。当函数执行完毕后，该函数内部定义的变量和函数仍然存在于内存中，不会被自动回收，因为可以被其他函数继续访问和使用这个机制成为闭包。
 
-闭包的原理是内存中创建一个包含函数和变量的环境，当函数返回后，该环境仍然存在于内存中，因此可以背起她函数访问和使用。闭包中的变量和函数可以被多次调用和修改，因此可以实现许多高级功能。
+##### 闭包的原理
+闭包的原理是内存中创建一个包含函数和变量的环境，当函数返回后，该环境仍然存在于内存中，因此可以被其他函数访问和使用。闭包中的变量和函数可以被多次调用和修改，因此可以实现许多高级功能。
 
 #### 闭包的使用场景：
 
 闭包的应用非常广泛，特别是在异步编程和模块化开发中，以下是一些常见的使用场景：
-1. 保存变量状态和私有化变量和函数。
-2. 用于事件处理和回调函数（🌰：return 一个函数出去，只要使用了回调函数，实际上就是使用闭包）
-3. 用于封装类和模块。（🌰：export出去，再通过import引入，其实就是用了闭包）
-4. 用于实现柯里化和函数式编程。（🌰：把多个参数变成了一个参数，本质上就是包装了一层，return 了一个函数出去，本质上还是那些参数）
+1. 保存变量状态和私有化变量和函数(🌰：vue中的data函数)。
+2. 用于事件处理和回调函数（🌰：return 一个函数出去，只要使用了回调函数，实际上就是使用闭包，节流和防抖）
+3. 用于封装类和模块。（🌰：export出去，再通过import引入，其实就是用了闭包，IIFE）
+4. 用于实现柯里化和函数式编程。（🌰：纯函数，数学函数的求值过程，把多个参数变成了一个参数，本质上就是包装了一层，return 了一个函数出去，本质上还是那些参数）
 5. 用于解决循环中异步问题（🌰：setTimeout中循环i（1-6），输出i为（1-6）的例子）
 6. 用于实现缓存和记忆化等功能。
 
@@ -600,14 +617,12 @@ for(var i=1;i<=5;i++){
 区别：
 1. 箭头函数比普通函数更加简洁：
 箭头函数返回值只有一句，直接可以省略大括号。如果不需要返回值直接加上void就可以了
-2. 箭头函数没有自己的this
+2. 箭头函数没有自己的this，箭头的函数的this指向永远不会被改变，call、apply、bind等方法不会改变箭头函数this的指向
 箭头函数不会创建自己的this，所以它没有this，它只会继承自己作用域的上一层，所以箭头函数在创建的时候this指向就已经定义好了
-3. 箭头的函数的this指向永远不会被改变
-4. call、apply、bind等方法不会改变箭头函数this的指向
-5. 箭头函数不能作为构造函数使用：因为箭头函数没有自己的this，所以会报错
-6. 箭头函数没有自己的arguments：箭头函数没有自己的argumnets对象，在箭头函数中访问的实际上获得的是它外层函数的arguments值
-7. 箭头函数没有prototype
-8. 箭头函数不能作为Genrator函数，不能使用yield关键字
+1. 箭头函数不能作为构造函数使用：因为箭头函数没有自己的this，所以会报错
+2. 箭头函数没有自己的arguments：箭头函数没有自己的argumnets对象，在箭头函数中访问的实际上获得的是它外层函数的arguments值
+3. 箭头函数没有prototype
+4. 箭头函数不能作为Genrator函数，不能使用yield关键字
 
 ### 23.es6有哪些新特性？
 1. let、const
@@ -734,3 +749,124 @@ reduce正序执行，reduceRight倒序执行
 ### 34. 对事件循环机制的理解（js事件轮询机制）
 #### 讲概念
 js事件循环机制（Event Loop）是一种异步编程模型，用于处理js中的事件和回调函数。js事件循环机制可以使得单线程的js能够处理多个任务，从而实现异步编程
+#### 深入知识点
+在浏览器中，JavaScript事件轮询机制由浏览器的事件循环负责执行。
+事件循环是一种机制，它会不断的轮询任务队列（Task Queue），并将队列中的任务依次执行。
+##### 分类
+ JavaScript中的任务可以分为两类：宏任务（Macro Task）和微任务（Micro Task）。
+###### 宏任务
+宏任务通常包括一些需要花费时间较长的操作。
+Script（可以理解成外层同步代码）
+setTimeout、setInterval
+UI Rendering、UI事件
+postMessage、MessageChannel
+setImmediate、I/O（node.js）
+###### 微任务
+微任务通常包括一些需要尽快执行的操作。
+Promise.then
+MutationObserver的回调函数
+process.nectTick（Node.js）
+##### 过程
+执行当前宏任务中的同步代码，直到遇到一个宏任务或者微任务。
+如果遇到微任务，则将它添加到微任务队列中，继续执行下一个同步代码。
+如果遇到宏任务，则将它添加到宏任务队列中，继续执行下一个同步代码。
+当前宏任务执行完成后，JavaScript引擎会检查是否存在未执行的微任务，如果存在则会立即执行这些微任务。当前的微任务队列执行完后，JavaScript会继续查看宏任务队列是否不为空，如果不为空，则执行下一个宏任务，重复上述的操作直到任务队列为空。
+当前事件轮询结束，等待下一次事件的触发。
+##### 注意
+需要注意的是，JavaScript中的事件轮询机制是单线程的，也就是说，所有任务都是在同一个线程中执行的，不能同时执行两个任务。如果当前宏任务执行时间过长，会阻塞其他宏任务的执行，从而导致应用程序的性能问题。
+因此在编写JavaScript代码时，应该尽可能避免长时间的同步操作，而是使用异步操作，以保证应用程序的性能和响应速度。
+##### 拓展
+node环境事件循环
+###### Node 11以前：
+执行完一个阶段的所有任务
+执行完nextTick队列里面的内容
+然后执行完微任务队列的内容
+###### Node 11以后： 
+和浏览器的行为统一了，都是每执行一个宏任务就执行完微任务队列。
+
+```js
+function test () {
+   console.log('start')
+    setTimeout(() => {
+        console.log('children2')
+        Promise.resolve().then(() => {console.log('children2-1')})
+    }, 0)
+    setTimeout(() => {
+        console.log('children3')
+        Promise.resolve().then(() => {console.log('children3-1')})
+    }, 0)
+    Promise.resolve().then(() => {console.log('children1')})
+    console.log('end')
+}
+
+test()
+
+// 以上代码在node11以下版本的执行结果(先执行所有的宏任务，再执行微任务)
+// start
+// end
+// children1
+// children2
+// children3
+// children2-1
+// children3-1
+
+// 以上代码在node11及浏览器的执行结果(顺序执行宏任务和微任务)
+// start
+// end
+// children1
+// children2
+// children2-1
+// children3
+// children3-1
+
+```
+###### async和await
+async是异步的意思，await则可以理解为等待。
+通常会一起使用这两个语句，用async来声明函数是异步方法，而await则是在async声明后的函数内部使用，用来等待异步方法执行。
+
+```js
+async function fn1 (){
+    console.log(1)
+    await fn2()
+    console.log(2) // 阻塞
+}
+
+async function fn2 (){
+    console.log('fn2')
+}
+
+fn1()
+console.log(3)
+// 1 -> fn2 -> 3 -> 2
+```
+await会阻塞后面的代码（即加入了微任务队列），然后继续执行async外部当前宏任务的同步代码，执行完成后执行微任务队列时会执行之前阻塞的代码。
+练习理解
+```js
+async function async1() {
+    console.log('async1 start')
+    await async2()
+    console.log('async1 end')
+}
+async function async2() {
+    console.log('async2')
+}
+console.log('script start')
+setTimeout(function () {
+    console.log('settimeout')
+})
+async1()
+new Promise(function (resolve) {
+    console.log('promise1')
+    resolve()
+}).then(function () {
+    console.log('promise2')
+})
+console.log('script end')
+
+/**
+start > async1 start > async2 > promise1 > script end > async1 end 
+> promise2 > settimeout
+*/
+```
+
+
