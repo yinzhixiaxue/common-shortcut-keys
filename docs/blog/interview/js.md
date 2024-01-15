@@ -515,6 +515,7 @@ function outer(){
 	}
 }
 
+
 var fn = outer()
 fn() // 1 执行结束了，但是fn中count仍然被引用着，如果已经结束使用，可以置空引用，如 fn = null
 ```
