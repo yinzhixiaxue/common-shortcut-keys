@@ -307,7 +307,7 @@ v-if适合运营条件不大可能改变；v-show适合频繁切换。
 
 ### 26. 说一下Vue的生命周期
 
-Vue示例有一个完整的生命周期，也就是从开始创建、初始化数据、编译模板、挂载Dom-->渲染、更新->渲染、卸载等一系列过程，称这是Vue的生命周期。
+Vue示例有一个完整的生命周期，也就是从开始创建、初始化数据、编译模板、挂载Dom->渲染、更新->渲染、卸载等一系列过程，称这是Vue的生命周期。
 1. beforeCreate(创建前）：数据观测和初始化事件还未开始，此时data的响应式追踪、event/watcher都还没有被设置，也就是说不能访问到data、computed、watch、methods上的方法和数据。
 2. created（创建后）：实例创建完成，实例上配置的options包=包括data、computed、watch、methods等配置完成，但是此时渲染的节点还未挂载到DOM，所以不能访问到$el属性。
 3. beforeMount（挂载前）：在开始挂载之前被调用，相关的render函数首次被调用。实例已完成以下的配置：编译模板，把data里面的数据和模板生成html。此时还没有挂载html到页面上。
@@ -335,7 +335,7 @@ LRU 即“最近最少使用”算法,根据数据的历史记录来进行淘汰
 - 链表满的时候，将链表尾部的数据丢弃 
 
 举例说明：
-```js
+```vue
 <template>
   <div>
     <button @click="changeComponent">Switch Component</button>
@@ -373,7 +373,7 @@ export default {
 ```
 在这个例子中，我们有三个组件 ComponentA，ComponentB 和 ComponentC，以及一个按钮用于切换当前显示的组件。
 
-我们使用了 <keep-alive> 的 include 属性，指定只有 ComponentA 应该被缓存；使用了 exclude 属性，指定 ComponentB 不应该被缓存；使用了 max 属性，指定缓存的最大数量为 2。
+我们使用了 `<keep-alive>` 的 include 属性，指定只有 ComponentA 应该被缓存；使用了 exclude 属性，指定 ComponentB 不应该被缓存；使用了 max 属性，指定缓存的最大数量为 2。
 
 这意味着，当我们切换组件时，ComponentA 会被缓存，ComponentB 不会被缓存，而对于 ComponentC，由于它没有被 include 和 exclude 指定，所以它的缓存行为会根据 max 来决定：如果当前缓存的组件数量已经达到了 max，那么 ComponentC 不会被缓存；否则，ComponentC 会被缓存。
 
